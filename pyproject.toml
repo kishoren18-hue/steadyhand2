@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "steadyhand2"
+version = "0.1.0"
+description = "Vision + EMG grasp gating with misfire-rate guarantees, built on SteadyHand and LibEMG"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Kishore Nuthalapati" }]
+requires-python = ">=3.10,<3.13"
+dependencies = ["steadyhand>=0.2", "numpy<2.0", "pandas", "scikit-learn"]
+
+[project.optional-dependencies]
+live = ["libemg==2.0.3", "opencv-python", "torch", "torchvision"]
+arm = ["lerobot[serial-motors]>=0.7"]
+test = ["pytest"]
+
+[tool.setuptools]
+packages = ["steadyhand2"]
