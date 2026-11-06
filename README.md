@@ -1,5 +1,7 @@
 # SteadyHand 2: a hand that looks before it grabs
 
+**Interactive demo: https://shiftbench.vercel.app/steadyhand2.html**
+
 A wrist camera guesses the grip the object affords. EMG says *when* to grab
 and *which* grip. The hand moves only when both agree with enough confidence;
 otherwise it holds still. The misfire promise ("at most 5% of decisions")
